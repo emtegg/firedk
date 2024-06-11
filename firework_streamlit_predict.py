@@ -11,12 +11,12 @@ import torch
 import os.path as osp
 
 # 导入YOLOv5特定模块
-# from models.common import DetectMultiBackend   # 模型加载和推理相关的类
-# from utils.datasets import IMG_FORMATS, VID_FORMATS, LoadImages, LoadStreams   # 用于加载图像和视频流的数据加载器
-# from utils.general import (LOGGER, check_file, check_img_size, check_imshow, check_requirements, colorstr,
-#                            increment_path, non_max_suppression, print_args, scale_coords, strip_optimizer, xyxy2xywh)
-# from utils.plots import Annotator, colors, save_one_box
-# from utils.torch_utils import select_device, time_sync
+from models.common import DetectMultiBackend   # 模型加载和推理相关的类
+from utils.datasets import IMG_FORMATS, VID_FORMATS, LoadImages, LoadStreams   # 用于加载图像和视频流的数据加载器
+from utils.general import (LOGGER, check_file, check_img_size, check_imshow, check_requirements, colorstr,
+                           increment_path, non_max_suppression, print_args, scale_coords, strip_optimizer, xyxy2xywh)
+from utils.plots import Annotator, colors, save_one_box
+from utils.torch_utils import select_device, time_sync
 FILE = Path(__file__).resolve()  # 获取当前脚本文件的绝对路径。
 ROOT = FILE.parents[0]           # YOLOv5根目录
 if str(ROOT) not in sys.path:
@@ -173,6 +173,9 @@ def main():
     predict = st.button("类别预测")
     if predict:
         st.image(output_path, channels="RGB")
+
+if __name__ == '__main__':
+    main()
 
 
 
