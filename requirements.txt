@@ -1,0 +1,10 @@
+streamlit
+streamlit_lottie
+shutil
+os
+sys
+pathlib
+cv2
+torch
+torch.backends.cudnn
+os.path
