@@ -12,7 +12,6 @@ import os.path as osp
 # 将项目根目录添加到 sys.path
 sys.path.append(str(Path(__file__).resolve().parent))
 
-from utils.datasets import exif_transpose, letterbox
 # 导入YOLOv5特定模块
 from models.common import DetectMultiBackend   # 模型加载和推理相关的类
 from utils.datasets import IMG_FORMATS, VID_FORMATS, LoadImages, LoadStreams   # 用于加载图像和视频流的数据加载器
