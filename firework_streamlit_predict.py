@@ -15,6 +15,7 @@ sys.path.append(str(Path(__file__).resolve().parent))
 # 导入YOLOv5特定模块
 from models.common import DetectMultiBackend   # 模型加载和推理相关的类
 from utils.datasets import IMG_FORMATS, VID_FORMATS, LoadImages, LoadStreams   # 用于加载图像和视频流的数据加载器
+from utils.datasets import exif_transpose, letterbox
 from utils.general import (LOGGER, check_file, check_img_size, check_imshow, check_requirements, colorstr,
                            increment_path, non_max_suppression, print_args, scale_coords, strip_optimizer, xyxy2xywh)
 from utils.plots import Annotator, colors, save_one_box
